@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <title>Josh's Address Book App</title>
+</head>
+<body ng-app="AddressBookApp">
+  <nav ng-controller="NavCtrl">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Address Book</a>
+        <ul class="right hide-on-med-and-down" ng-repeat="thingy in navItems">
+          <li><a href="sass.html"><i class="material-icons right"</a></li>
+          <li><a href="badges.html"><i class="material-icons left">view_module</i>Add New Contact</a></li>
+        </ul>
+    </div>
+  </nav>
+  <div class="col-xs-12" ng-view>
+    <h1>Address Book</h1>
+  </div>
+<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/ContactListCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/NewContactCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/ContactDetailViewCtrl.js"></script>
+</body>
+</html>

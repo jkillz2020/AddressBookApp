@@ -1,0 +1,36 @@
+<h1>New Contact</h1>
+<form>
+  <div class="form-group">
+    <label>First Name</label>
+    <input type="text" class="form-control" placeholder="Jon" ng-model="newContact.firstName"/>
+  </div>
+  <div class="form-group">
+    <label>Last Name</label>              
+    <input type="text" class="form-control" placeholder="Doe" ng-model="newContact.lastName"/>
+  </div>            
+  <div class="form-group">
+    <label>Street Address</label>              
+    <input type="text" class="form-control" placeholder="Zoe" ng-model="newContact.streetAddress"/>
+  </div>            
+  <div class="form-group">
+    <label>City, State</label>              
+    <input type="text" class="form-control" placeholder="My house" ng-model="newContact.cityState"/>
+  </div>       
+  <div class="form-group">
+    <label>Zipcode</label>              
+    <input type="text" class="form-control" placeholder="55555" ng-model="newContact.zipcode"/>
+  </div>          
+  <div class="form-group">
+    <label>Phone</label>              
+    <input type="text" class="form-control" placeholder="555-555-5555" ng-model="newContact.phone"/>
+  </div>
+  <div class="form-group">
+    <label>E-mail</label>              
+    <input type="text" class="form-control" placeholder="contactname@email.com" ng-model="newContact.email"/>
+  </div>
+  <div class="form-group">
+    <label>Notes</label>              
+    <input type="text" class="form-control" placeholder="About this contact" ng-model="newContact.notes"/>
+  </div>
+  <button class="btn btn-default" ng-click="addNewContact()">Add New Contact</button>
+</form>
