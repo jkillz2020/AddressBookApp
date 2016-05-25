@@ -1,14 +1,14 @@
 app.controller("NavCtrl", function($scope){
   $scope.navItems = [
   {
-    name: "Search",
-    url: "#/contacts/search"}, 
+    name: "Contact Details",
+    url: "#/contacts/contacts-details"}, 
   {
-    name: "All Items",
-    url: "#/contacts/list"},
+    name: "All Contacts",
+    url: "#/contacts/contacts-list"},
   {
     name: "Add New Contact",
-    url: "#/contacts/addnew"
+    url: "#/contacts/new-contacts"
   }
   ];
 });
