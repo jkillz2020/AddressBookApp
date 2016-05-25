@@ -7,8 +7,8 @@
   <title>Josh's Address Book App</title>
 </head>
 <body ng-app="AddressBookApp">
-  <nav ng-controller="NavCtrl">
-    <div class="nav-wrapper">
+  <nav class="nav-wrapper"ng-controller="NavCtrl">
+    <div>
       <a href="#!" class="brand-logo">Address Book</a>
         <ul class="right hide-on-med-and-down" ng-repeat="thingy in navItems">
           <li><a href="sass.html"><i class="material-icons right"</a></li>
@@ -24,6 +24,10 @@
 <script type="text/javascript" src="lib/node_modules/angular/angular.js"></script>
 <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="app/app.js"></script>
+
+  <script type="text/javascript" src="app/factories/ContactFactory.js"></script>
+
+
 <script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/ContactListCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/NewContactCtrl.js"></script>
