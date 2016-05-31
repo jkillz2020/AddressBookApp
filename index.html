@@ -1,34 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <title>Josh's Address Book App</title>
+  <title>Josh's Address Book</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body ng-app="AddressBookApp">
-  <nav class="nav-wrapper"ng-controller="NavCtrl">
-      <a href="#!" class="brand-logo">Address Book</a>
-        <ul class="right hide-on-med-and-down" ng-repeat="thingy in navItems">
-          <li><a href="sass.html"><i class="material-icons right"</a></li>
-          <li><a href="badges.html"><i class="material-icons left">view_module</i>Add New Contact</a></li>
-        </ul>
-  </nav>
-  <div class="container" ng-view>
-    <h5>Address Book</h5>
+<div ng-include="'./partials/nav-bar.html'"></div>
+  <div>
+
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 main-container">
+        <div class="col-xs-12" ng-view>
+         
+        </div>
+      </div>
+    </div>
   </div>
+​
 <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/node_modules/angular/angular.js"></script>
 <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/firebase/firebase.js"></script>
+<script type="text/javascript" src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
 <script type="text/javascript" src="app/app.js"></script>
 
+  <script type="text/javascript" src="app/factories/AuthFactory.js"></script>
   <script type="text/javascript" src="app/factories/ContactFactory.js"></script>
 
 
-<script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/LoginCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/ContactListCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/NewContactCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/ContactDetailViewCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/ContactEditCtrl.js"></script>
 </body>
 </html>
+
+
+
+    
+    
+​

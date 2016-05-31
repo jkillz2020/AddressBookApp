@@ -1,6 +1,6 @@
-<h1>{{selectedContact.firstName.lastName}}</h1>
+<h1>{{selectedContact.firstName}}</h1>
 
- <a class="btn-floating btn-large waves-effect waves-light red"><i class="large material-icons">mode_edit</i></a>
+ <button class="btn btn-info"><a ng-href="#/contact/{{selectedContact.id}}/edit">Edit</a></button>
 
 <h5>Street Address: {{selectedContact.streetAddress}}</h5>
 <h5>City, State: {{selectedContact.cityState}}</h5>

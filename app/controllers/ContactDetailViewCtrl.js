@@ -1,18 +1,14 @@
-app.controller("ContactDetailViewCtrl", function($q, $scope, $http, $routeParams, contactStorage){
+app.controller("ContactDetailViewCtrl", function($scope, $http, $routeParams, contactStorage){
   $scope.contacts = [];
   $scope.selectedContact = {};
+  console.log($routeParams.contactId);
   
-    $http.get("https://jk-addressapp.firebaseio.com/contacts.json")
-      .success(function(contactObject){
-        var contactCollection = contactObject;
-        Object.keys(contactCollection).forEach(function(key){
-          contactCollection[key].id=key;
-          $scope.contacts.push(contactCollection[key]);
+    contactStorage.getContactList().then(function(contactCollection){
+      $scope.contacts = contactCollection;
 
-          $scope.selectedcontact = $scope.contacts.filter(function(contact){
-            return contact.id === $routeParams.contactId;
-          })[0];
-      })
-  });
-
+      $scope.selectedcontact = $scope.contacts.filter(function(contact){
+    return contact.id === $routeParams.contactId;
+  })[0];
+    })
 });
+

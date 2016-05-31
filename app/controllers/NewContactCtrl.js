@@ -1,5 +1,7 @@
-app.controller("NewContactCtrl", function($scope, $http, $location, ContactStorage){
+app.controller("NewContactCtrl", function($scope, $http, $location, contactStorage, AuthFactory){
   $scope.contact = "";
+  $scope.title = "New Contact";
+  $scope.submitButtonText = "Add New Contact"
   $scope.newContact = {
     firstName: "",
     lastName: "",
@@ -14,24 +16,12 @@ app.controller("NewContactCtrl", function($scope, $http, $location, ContactStora
 
   $scope.contacts = [];
   
-    $scope.addNewContact = function(){
-      $http.post(
-        "https://jk-addressapp.firebaseio.com/contacts.json",
-        JSON.stringify({
-          firstName: $scope.newContact.firstName,
-          lastName: $scope.newContact.lastName,
-          streetAddress: $scope.newContact.streetAddress,
-          cityState: $scope.newContact.cityState,
-          zipcode: $scope.newContact.zipcode,
-          phone: $scope.newContact.phone,
-          email: $scope.newContact.email,
-          notes: $scope.newContact.notes
-        })
-      )
-      .success(function(response){
-        console.log(response);
-        $location.url("contact/list")
-      })
+    $scope.addNewItem = function(){
+     itemStorage.postNewItem($scope.newContact)
+       .then(function successCallback(response){
+         console.log("response",response );
+         $location.url("contacts/list");
+       });        
 
     };
 });
